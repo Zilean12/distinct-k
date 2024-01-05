@@ -1,0 +1,38 @@
+def kth_distinct(arr, k):
+    # 'COUNTER' variable.
+    count = 0
+
+    for i in range(len(arr)):
+        count_num = 0
+        for j in range(len(arr)):
+            # Counting frequency of the string.
+            if arr[i] == arr[j]:
+                count_num += 1
+
+        # If it’s distinct, i.e., frequency is 1.
+        if count_num == 1:
+            count += 1
+
+            # If it’s Kth distinct string then return it.
+            if count == k:
+                return arr[i]
+
+    # Edge case as mentioned above.
+    return ""
+
+def main():
+    # Taking user input.
+    n = int(input())
+    arr = []
+
+    for _ in range(n):
+        s = input()
+        arr.append(s)
+
+    k = int(input())
+
+    # Calling the function 'kth_distinct'.
+    print(kth_distinct(arr, k))
+
+if __name__ == "__main__":
+    main()
