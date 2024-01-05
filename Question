@@ -1,0 +1,7 @@
+Question 
+
+Ashish is provided with a collection of n strings in which some strings are of repeating nature and he has been given with a number k.
+
+His task is to find the kth unique string. Also before finding the kth unique string he has to sort each individual string beforehand. If there are fewer unique strings than k return empty string.
+
+As his best friend, your task is to help Ashish in accomplishing the task.
